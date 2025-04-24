@@ -29,7 +29,7 @@ public class S08Checkbox {
             // Verificar valor
             if ("Bike".equals(value) || "Boat".equals(value)) {
                 // Verificar que la casilla no este seleccionada
-                if (!checkbox.isDisplayed()) {
+                if (!checkbox.isSelected()) {
                     // Hacer clic
                     checkbox.click();
                 }
