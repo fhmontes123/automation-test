@@ -14,7 +14,8 @@ public class S17CssSelectorAvanzado {
 
         driver.get("https://www.saucedemo.com/");
 
-        WebElement userCss = driver.findElement(By.cssSelector("form > div.form_group > input#user-name"));
+        // WebElement userCss = driver.findElement(By.cssSelector("form > div.form_group > input#user-name"));
+        WebElement userCss = driver.findElement(By.cssSelector("input[id='user-name']"));
 
         userCss.sendKeys("newusercss");
     }

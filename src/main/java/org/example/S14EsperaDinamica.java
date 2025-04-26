@@ -18,8 +18,9 @@ public class S14EsperaDinamica {
 
         driver.get("https://www.saucedemo.com");
 
+        // Instanciar wait por 10 segundos
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+        // Implementar espera
         WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.name("login-button")));
 
         login.click();

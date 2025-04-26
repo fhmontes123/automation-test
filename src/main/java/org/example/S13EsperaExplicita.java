@@ -17,8 +17,8 @@ public class S13EsperaExplicita {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.saucedemo.com");
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //  Configurar una espera explicita de 10 segundos
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Limite maximo
 
         WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name")));
 

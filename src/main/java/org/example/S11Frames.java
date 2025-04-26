@@ -14,11 +14,13 @@ public class S11Frames {
 
         driver.get("https://www.w3schools.com/TAGS/tryit.asp?filename=tryhtml_iframe");
 
+        // Ingresa Frame Resultante
         driver.switchTo().frame("iframeResult");
-        driver.switchTo().frame(driver.findElement(By.xpath("/html/body/iframe")));
-
-        WebElement iframeElement = driver.findElement(By.xpath("//*[@id=\"pagetop\"]/div[3]/a[1]"));
-
+        // Ingresa Frame de la pagina
+        driver.switchTo().frame(driver.findElement(By.xpath("/html/body/iframe"))); // /html/body/iframe
+        // Localizar boton Login
+        WebElement iframeElement = driver.findElement(By.xpath("//*[@id=\"pagetop\"]/div[3]/a[1]")); // //*[@id="pagetop"]/div[3]/a[1]
+        // Click
         iframeElement.click();
     }
 }

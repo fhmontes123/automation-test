@@ -15,6 +15,7 @@ public class S15XPathAbsolutoRelativo {
         driver.get("https://www.saucedemo.com/");
 
         WebElement absoluto = driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input"));
+        // WebElement absoluto = driver.findElement(By.xpath("//*[@id=\"user-name\"]"));
 
         WebElement relativo = driver.findElement(By.xpath("//*[@id=\"password\"]"));
 

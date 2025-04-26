@@ -14,6 +14,10 @@ public class S16ExpresionesAvanzadasXPath {
 
         driver.get("https://www.saucedemo.com/");
 
+        // WebElement email = driver.findElement(By.xpath("//*[@id=\"user-name\"]"));
+//        WebElement email = driver.findElement(By.xpath("//input[@id='user-name']"));
+//        WebElement email = driver.findElement(By.xpath("//input[@data-test='username']"));
+//        WebElement email = driver.findElement(By.xpath("//input[contains(@id, 'user')]"));
         WebElement email = driver.findElement(By.xpath("//input[starts-with(@id, 'user')]"));
 
         email.sendKeys("nuevouser");

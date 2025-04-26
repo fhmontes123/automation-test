@@ -15,15 +15,18 @@ public class S09VentanasEmergentes {
 
         driver.get("https://demoqa.com/alerts");
 
-        WebElement btnAlert = driver.findElement(By.xpath("//*[@id=\"alertButton\"]"));
+        WebElement btnAlert = driver.findElement(By.xpath("//*[@id=\"alertButton\"]")); //*[@id="alertButton"]
+
         btnAlert.click();
 
+        // Tiempo de espera de 2 segundos
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ex) {
             throw new RuntimeException();
         }
 
+        // Acceder al alert del navegador
         Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
         alert.accept();
