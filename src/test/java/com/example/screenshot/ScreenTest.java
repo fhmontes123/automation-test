@@ -23,7 +23,7 @@ public class ScreenTest {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private final static String USERNAME = "myuser01";
+    private final static String USERNAME = "hugo04";
     private final static String PASSWORD = "Password*123";
 
     @BeforeClass
@@ -66,7 +66,7 @@ public class ScreenTest {
             // VERIFICAR SI SE MUESTRA EL MENSAJE
             if (alreadyExistUser.isDisplayed()) {
                 System.out.println("El texto 'User already exists' esta visible.");
-                takeScreenShot("Already exists");
+                takeScreenShot("Already exists"); // HACER CAPTURA DE PANTALLA
             }
         } catch (TimeoutException ex) {
             // SI NO APARECE EL MENSAJE
@@ -129,7 +129,7 @@ public class ScreenTest {
         WebElement newPassword = driver.findElement(By.id("newPassword"));
         newPassword.sendKeys("NewPassword*123");
         WebElement newPasswordConfirmation = driver.findElement(By.id("newPasswordConfirmation"));
-        newPasswordConfirmation.sendKeys("PasswordNew*123");
+        newPasswordConfirmation.sendKeys("NewPassword*123");
 
         // CAPTURA DE PANTALLA CUANDO LOS PASSWORDS NO SON IGUALES
         // VERIFICAMOS QUE EXISTA EL MENSAJE "Passwords do not match"
@@ -139,7 +139,7 @@ public class ScreenTest {
             // VERIFICAR SI SE MUESTRA EL MENSAJE
             if (messageErrorPassword.isDisplayed()) {
                 System.out.println("El texto 'Passwords do not match' esta visible.");
-                takeScreenShot("Passwords do not match");
+                takeScreenShot("Passwords do not match"); // CAPTURA DE PANTALLA
             }
         } catch (TimeoutException ex) {
             // SI NO APARECE EL MENSAJE
